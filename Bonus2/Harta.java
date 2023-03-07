@@ -87,8 +87,8 @@ public class Harta {
                     l1 = r.getLocation2();
                 }
                 if(!visited.contains(l1)) {
-                    if(speedAndLength.get(l1) == null || (speedAndLength.get(l1) > speedAndLength.get(locAdd) + r.getLength() * r.getSpeedLimit())) {
-                        speedAndLength.put(l1, speedAndLength.get(locAdd) + r.getLength() * r.getSpeedLimit());
+                    if(speedAndLength.get(l1) == null || (speedAndLength.get(l1) > speedAndLength.get(locAdd) + r.getLength() / r.getSpeedLimit())) {
+                        speedAndLength.put(l1, speedAndLength.get(locAdd) + r.getLength() / r.getSpeedLimit());
                         before.put(l1, locAdd);
                     }
                 }
