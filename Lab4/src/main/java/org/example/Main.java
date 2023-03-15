@@ -24,6 +24,7 @@ public class Main {
         Set<Project> sortedProjects = new TreeSet<>(projects);
         sortedProjects.forEach(System.out::println);
     }
+    
 
     //Implementez o metoda care returneaza primele i proiecte (pentru a-mi furniza o lista cu proiectele de la 0 la 2-i).
     public static List<Project> getProjects(List<Project> projects, int index) {
