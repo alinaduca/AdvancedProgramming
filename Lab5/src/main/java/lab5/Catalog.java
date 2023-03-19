@@ -28,12 +28,13 @@ public class Catalog implements Serializable {
         return docs;
     }
 
-   public Document findById(String id) {
-       return docs.stream()
+    //Pentru a cauta un document dupa ID-ul lui
+    public Document findById(String id) {
+        return docs.stream()
                .filter(d -> d.getId().equals(id))
                .findFirst()
                .orElse(null);
-   }
+    }
 
     @Override
     public String toString() {
