@@ -1,0 +1,120 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 13</title> </head>
+<body>
+
+<a name="lab13"></a>
+
+
+<h1> Lab 13</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b>Internationalization and Localization</b> <br>
+Create an application to explore the available <b>locales</b> included in the standard Java Development Kit.
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+
+</p><ul>
+<li> Create a package with the name <i>res</i>. Inside this package create the files: <i>Messages.properties</i>, <i>Messages_ro.properties</i>.
+<table>
+<tbody><tr>
+<td>
+<font color="blue">
+<pre>#Messages.properties file
+prompt = Input command:
+locales = The available locales are:
+locale.set = The current locale is {0}
+info = Information about {0}:
+invalid = Unknown command
+</pre>
+</font>
+</td>
+
+<td>
+<font color="blue">
+<pre>#Messages_ro.properties file
+prompt = Comanda ta:
+locales = Localizarile disponibile sunt:
+locale.set = Localizarea curenta este {0}
+info = Informatii despre localizarea {0}:
+invalid = Comanda necunoascuta
+</pre>
+</font>
+</td>
+
+</tr>
+</tbody></table>
+<br>
+
+</li><li> Create the package <i>com</i> and implement the following classes describing commands:
+<ul> 
+<li> <i>DisplayLocales</i>: to display all available locales
+</li><li> <i>SetLocale</i>: to set the application current locale.
+</li><li> <i>Info</i>: to display informations about the current or a specific locale. <br>
+When the user sets a specific language tag, various information obtained using standard Java classes such as <i>Currency</i> or <i>DateFormatSymbols</i> 
+should be displayed in a text area, as in the following example:
+	<ul>
+	<li> <font color="blue">Country</font>: Romania	(România)
+	</li><li> <font color="blue">Language</font>: Romanian (română)
+	</li><li> <font color="blue">Currency</font>: RON (Romanian Leu)
+	</li><li> <font color="blue">Week Days</font>: luni, marţi, miercuri, joi, vineri, sâmbătă, duminică
+	</li><li> <font color="blue">Months</font>: ianuarie, februarie, martie, aprilie, mai, iunie, iulie, august, septembrie, octombrie, noiembrie, decembrie
+	</li><li> <font color="blue">Today</font>: May 8, 2016	(8 mai 2016)
+	</li></ul>
+
+</li></ul>
+</li><li> Create the package <i>app</i> and the main class <i>LocaleExplore</i>. Inside this class, read commands from the keyboard and execute them.
+
+</li><li> All the <b>locale-sensitive</b> information should be <b>translated</b> in at least two languages (english-default and romanian), using the resource files.
+
+</li></ul>
+
+<!--
+<hr>
+<p><b>Optional</b> (1p)
+<br/>
+<li> Map the command names to corresponding classes using an external file <i>Commands.properties</i>. 
+<li> The names of the commands should also be configurable.
+<pre>
+#Commands.properties
+set-locale.command = set
+set-locale.impl = com.SetLocale</code>
+...
+</pre>
+<li>Invoke a REST Web Service to obtain additional information about a country (capital, continent, etc.), 
+for example <a href="http://www.oorsprong.org/websamples.countryinfo/CountryInfoService.wso">DataFlex Web Service for Country information</a>.
+</ul>
+</ul>
+-->
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://docs.oracle.com/javase/tutorial/i18n/"> Internationalization </a>
+<!--
+<li> <a href="https://docs.oracle.com/javase/tutorial/deployment/"> Deployment </a>
+<li> <a href="https://docs.oracle.com/javase/tutorial/deployment/webstart/"> Java Web Start</a>
+<li> <a href="https://docs.oracle.com/javase/tutorial/deployment/applet/"> Java Applets</a>
+<li> <a href="http://www.oracle.com/technetwork/java/javase/migratingfromapplets-2872444.pdf"> Migrating from Java Applets to plugin-free Java technologies </a>
+-->
+</li></ul>
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Understand the concepts of <i>internationalization</i> and <i>localization</i>
+</li><li> Identify a localization by using the <i>Locale</i> object
+</li><li> Use properties files  and resource bundles
+</li><li> Parse and format locale-sensitive data, such as dates, number, currencies.
+<!--
+<li> Use Java Web Start to deploy an application.
+<li> Understand the reason why applets are now deprecated.
+-->
+</li></ul>
+
+
+
+</body></html>

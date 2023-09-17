@@ -1,0 +1,105 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 6</title> </head>
+<body>
+
+<a name="lab6"></a>
+
+
+<h1> Lab 6</h1>
+<b>[valid 2021-2022]</b>
+
+<p>
+<b>Graphical User Interfaces (Swing, JavaFX)</b> <br>
+Consider a <a href="https://en.wikipedia.org/wiki/Positional_game">positional game</a> played on board containing a number of <i>dots</i> placed on a circle.
+Some dots are connected to other dots using <i>lines</i>. Initially, the existing lines are gray (not colored). <br>
+Two players take turns coloring any uncolored lines. One player colors 
+in one color (red), and the other colors in another color (blue). <br>
+</p><ul>
+<li> Variant 1:  Each player tries to create a triangle made solely of his color.  The player who succeeds, wins the game.
+</li><li> Variant 2:  Each player tries to avoid the creation of a 
+triangle made solely of his color.  The player who cannot avoid creating
+ such a triangle, loses the game.
+</li></ul>
+<br>
+In order to create a graphical user interface for the game, you may use either Swing or JavaFX. 
+<p>
+Example of a board:
+</p><p>
+<img src="Lab%206_files/game.png" width="400" height="300">
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+</p><p>
+Create the following components:
+</p><ul>
+<li> The <i>main frame</i> of the application.
+
+</li><li> A <i>configuration panel</i> for introducing parameters regarding the number of dots and lines and a button for creating a new game.
+The panel must be placed at the <i>top</i> part of the frame. The panel must contain at least one label and one input component.
+
+</li><li> A <i>canvas (drawing panel)</i> for drawing the board. Draw the dots and the lines according to the values specified in the config panel.
+This panel must be placed in the <i>center</i> part of the frame.
+
+</li><li> A <i>control panel</i> for managing the game.
+This panel will contain the buttons: <i>Load</i>, <i>Save</i>, <i>Exit</i> ,etc. and it will be placed at the <i>bottom</i> part of the frame.
+</li></ul>
+
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+</p><ul>
+<li> Create the object oriented model of the game. Consider implementing a retained mode for drawing the game board.
+</li><li> Implement the logic of the game. Use a <i>mouse listener</i> in order to select the line which must be colored, either by selecting the dots or the line itself.
+Validate the moves, according to the game rules. Determine the winner of the game.
+</li><li> Export the current image of the game board into a PNG file.
+</li><li> Use object serialization in order to save and restore the current status of the game.
+</li></ul>
+
+
+<hr>
+<p><b>Bonus</b> (2p)
+</p><ul>
+<li> Implement a non-trivial AI for the game.
+</li><li> Using Graph4J API, implement an efficient algorithm for counting all the triangles in a graph;
+see <a href="https://github.com/jgrapht/jgrapht/blob/master/jgrapht-core/src/main/java/org/jgrapht/GraphMetrics.java">GraphMetrics.getNumberOfTriangles</a> in JGraphT.
+<br>
+</li></ul>
+
+
+
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_06.pdf">Slides</a>
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/uiswing/">Creating a GUI With JFC/Swing</a>
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/2d/"> The Java Tutorials: 2D Graphics</a>
+</li><li> <a href="https://openjfx.io/openjfx-docs/">Getting Started with JavaFX</a>
+</li><li> <a href="https://gluonhq.com/products/scene-builder/"> JavaFX Scene Builder </a>
+<!-- <li> <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Download Java Demos </a> and check <i>\demo\jfc\SwingSet2</i> example.
+<li> <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Download Java Demos </a> and check <i>Java2D</i> application.
+ --><!-- <li> <a href="http://docs.oracle.com/javase/8/javase-clienttechnologies.htm">Java SE Client Technologies - JavaFX</a> -->
+<!-- <li> <a href="http://www.oracle.com/technetwork/java/javase/overview/javafx-samples-2158687.html">Download JavaFX Demos </a> and check <i>Ensemble</i> application.
+<li> <a href="http://www.oracle.com/technetwork/java/javafxscenebuilder-1x-archive-2199384.html">Download JavaFX Scene Builder 2.0 </a>
+<li> <a href="https://docs.oracle.com/javase/8/scene-builder-2/work-with-java-ides/sb-with-nb.htm">Using Scene Builder with NetBeans IDE</a>
+ --></li></ul>
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Get familiar with the basic elements of design involved in creating a GUI.
+</li><li> Understand the concepts of <i>component</i>, <i>container</i>, <i>layout manager</i>.
+</li><li> Get acquainted with various libraries for creating a GUI application, such as AWT, Swing, SWT, Java FX.
+</li><li> Write <i>event listeners</i> to handle events.
+</li><li> Understand how Swing components are <i>painted</i>.
+</li><li> Create custom components using Java2D that coexist with standard Swing components.
+</li><li> Understand the concept of <i>graphic context</i>.
+</li><li> Get familiar with Java2D basic <i>geometric</i> primitives, use <i>colours</i>, <i>fonts</i>, <i>images</i>
+</li><li> Get acquainted with JavaFX technology and understand the differences between Swing and JavaFX.
+</li></ul>
+
+
+
+</body></html>

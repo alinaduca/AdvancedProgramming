@@ -1,0 +1,89 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 8</title> </head>
+<body>
+
+<a name="lab8"></a>
+
+
+<h1> Lab 8</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b>JDBC</b> <br>
+Write an application that allows to <b>connect</b> to a relational database by using JDBC, <b>submit</b> SQL statements and display the results.
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+
+</p><ul>
+<li>Create a relational database using any RDBMS (Oracle, Postgres, MySql, Java DB, etc.).
+</li><li>Write an SQL script that will create the following tables:
+<ul>
+<li> <i>albums</i>: id, release year, title, artist, genre(s)
+</li><li> <i>artists</i>: id, name (for example: Beatles)
+</li><li> <i>genres</i>: id, name (for example: Rock)
+</li><li> an associative (junction) table in order to store each album genres
+</li></ul>
+
+</li><li>Update <i>pom.xml</i>, in order to add the <i>database driver</i> to the project libraries.
+</li><li>Create a <i>singleton</i> class in order to manage a connection to the database.
+</li><li>Create <i>DAO</i> classes that offer methods for managing artists, genres and albums (at least one).
+</li><li>Implement a simple test using your classes.
+</li></ul>
+
+
+<hr>
+<p><b>Optional</b> (2p)
+<br>
+
+</p><ul>
+<li> Create an object-oriented model of the data managed by the Java application.
+</li><li> Implement all the DAO classes.
+</li><li> Use a <i>connection pool</i> in order to manage database connections, such as <a href="https://www.mchange.com/projects/c3p0/">C3PO</a>, 
+<a href="https://github.com/brettwooldridge/HikariCP">HikariCP</a> or <a href="http://commons.apache.org/proper/commons-dbcp/">Apache Commons DBCP</a>.
+</li><li> Create a <i>tool</i> to import data from a real dataset, 
+such as <a href="https://www.kaggle.com/datasets/notgibs/500-greatest-albums-of-all-time-rolling-stone">Rolling Stone's 500 Greatest Albums of All Time</a>
+(or other)
+</li></ul>
+
+
+<hr>
+<p><b>Bonus</b> (2p)
+</p><ul>
+<li> Extend the model in order to create <i>playlists</i>. A playlist has a name, a creation timestamp and a set of albums.
+
+</li><li> Two albums are <i>related</i> if they meet at least one of the following conditions:
+are composed by the same artist or have been released in the same year or have at least one common genre. <br>
+Create an algorithm that generates maximal playlists (all of them or a limited number, if there are too many) that contain <u>only unrelated albums</u>. 
+<!-- The albums will be ordered by their release year. -->
+
+</li></ul>
+
+
+
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_08.pdf">Slides</a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/jdbc/basics/">JDBC</a>
+</li><li> <a href="https://docs.oracle.com/cd/B19306_01/java.102/b14355.pdf">Oracle Database JDBC Developer's Guide and Reference </a>
+</li><li> <a href="https://www.javacodegeeks.com/2015/02/jdbc-tutorial.html">JDBC Tutorial - The ULTIMATE Guide </a> 
+
+</li></ul>
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Understand terms and concepts related to relational databases: DBMS, SQL, table, query, stored procedure, cursor, etc.
+</li><li> Connect to a relational database by using a JDBC driver
+</li><li> Submit queries and get results from the database
+</li><li> Specify JDBC driver information externally
+</li><li> Perform CRUD operations by using the JDBC API
+</li></ul>
+
+
+
+</body></html>

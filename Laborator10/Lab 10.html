@@ -1,0 +1,104 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 10</title> </head>
+<body>
+
+<a name="lab10"></a>
+
+
+<h1> Lab 10</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b>Networking</b> <br>
+
+Create an implementation of <a href="https://en.wikipedia.org/wiki/Gomoku">Gomoku (Five in a row)</a> that allows remote players to start or join games.
+The application will contain two parts (create a project for each one):
+</p><ul>
+<li>The <b>server</b> is responsible with the game management and mediating the players.
+</li><li>The <b>client</b> will communicate with the server, sending it <i>commands</i> such as:
+  <ul>
+  <li>create or join a game,  
+  </li><li>submit a move, etc.
+  </li></ul>
+</li></ul>
+
+<p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+</p><ul>
+<li> <b>Create the project ServerApplication</b>. This will contain (at least) the classes: <i>GameServer</i> and <i>ClientThread</i>.
+</li><li> Create the class <i>GameServer</i>. An instance of this class will create a <i>ServerSocket</i> running at a specified port.
+The server will receive requests (commands) from clients and it will execute them. 
+</li><li> Create the class <i>ClientThread</i>. An instance of this class will be responsible with communicating with a client <i>Socket</i>.
+If the server receives the command <i>stop</i> it will stop and will 
+return to the client the respons "Server stopped", otherwise it return: 
+"Server received the request ... ".
+</li><li> <b>Create the project ClientApplication</b>. This will contain (at least) the class: <i>GameClient</i>.
+</li><li> Create the class <i>GameClient</i>. An instance of this class 
+will read commands from the keyboard and it will send them to the 
+server. The client stops when it reads from the keyboard the string 
+"exit".
+</li></ul>
+
+
+<hr>
+<p><b>Optional</b> (2p)
+</p><ul>
+<li> Implement functionalities of the game, using the classes <i>Game</i>, <i>Board</i>, <i>Player</i>, etc.
+</li><li> The clients will send to the server commands such as: <i>create game</i>, <i>join game</i>, <i>submit move</i>, etc.
+</li><li> The server is responsible with the game management and mediating the players.
+</li><li> The games will be played under <u>time control (blitz)</u> with each player having the same amount of time at the beginning of the game. 
+If a player's time runs out, the game is lost.
+<!--
+<li> Once a game is finished, an HTML or <a href="https://en.wikipedia.org/wiki/Smart_Game_Format">SGF</a> representation of the game should be uploaded to a Web server. <br/>
+You may use <a href="http://www.jcraft.com/jsch/"> JCraft </a> for connecting to a server using SFTP and transferring a file (or a similar solution).
+-->
+</li></ul>
+
+
+<hr>
+<p><b>Bonus</b>(2p)
+</p><ul>
+<li> Implement a feature for organizing <i>tournaments</i>. <br>
+Assuming there are <code>n</code> players registered on the server, create a schedule such that:
+	<ol> 
+	<li> each player will play with every other player exactly once (colors are chosen randomly);
+	</li><li> a player can not have more than <code>p</code> games in a day;
+	</li><li> the tournament must finish in at most <code>d</code> days.
+	</li></ol>
+You may use an <a href="https://en.wikipedia.org/wiki/Integer_programming">ILP (Integer Linear Programming)</a> solver, such as <a href="https://www.gurobi.com/">Gurobi</a>, 
+<a href="https://www.ibm.com/products/ilog-cplex-optimization-studio/cplex-optimizer">CPLEX</a> or <a href="https://developers.google.com/optimization">OR-Tools</a>.
+
+</li><li> Once the schedule is created, generate random outcomes for all games (there are no draws). <br>
+Find the sequence of players <code>p<sub>1</sub>,p<sub>2</sub>,...,p<sub>n</sub></code> such that <code>p<sub>i</sub></code> beats <code>p<sub>i+1</sub></code>, for all <code>i=1,n-1</code>.
+<br>
+You may use <a href="https://profs.info.uaic.ro/~acf/graph4j/">Graph4J.
+<!-- <li> Alternatively, you may implement a non-trivial AI for Gomoku or create a GUI for the game. -->
+</a></li></ul><a href="https://profs.info.uaic.ro/~acf/graph4j/">
+
+
+<br>
+
+<p>
+<b>Resources</b>
+</p></a><ul><a href="https://profs.info.uaic.ro/~acf/graph4j/">
+</a><li><a href="https://profs.info.uaic.ro/~acf/graph4j/"> </a><a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_10.pdf">Slides</a> 
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/networking/">Custom Networking</a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/rmi/"> Remote Method Invocation (RMI) </a>
+</li><li> <a href="http://tutorials.jenkov.com/java-networking/index.html"> Java Networking </a>
+</li></ul>
+
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Understand terms and concepts related to networking: protocol, IP, port, URL, socket, and datagram.
+</li><li> Get familiar with the client-server programming model.
+</li><li> Write programs that communicate with other programs on the network, using TCP or UDP.
+</li><li> Get acquainted with RMI technology.
+</li></ul>
+
+
+
+</body></html>

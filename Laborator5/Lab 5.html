@@ -1,0 +1,118 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 5</title> </head>
+<body>
+<a name="laborator3"></a>
+
+
+<h1> Lab 5</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b><font color="red">Starting from this week...</font></b>:
+
+</p><ul>
+<li>Pay attention to exception handling (otherwise: -0.5 points)
+</li><li>Create your own types of exceptions to report abnormal events related to application execution.
+</li><li>Organize your classes and interfaces in packages.
+</li></ul>
+
+<p>
+<b>Document Management System</b><br>
+Write an application that can manage a catalog of documents. An entry in this catalog might be <i>an article</i>, <i>a book</i>, etc. <br>
+A document may be located using a <i>path</i> in the local file system or a <i>link</i> to an external URL. 
+Each document has a unique <i>ID</i>, a <i>name</i> and may have additional <i>tags</i>, which are pairs <i>name-value</i>. Example of tags may be <i>title</i>, <i>author</i>, <i>year</i>, <i>publishingDate</i>, etc.
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+</p><ul>
+<li>Create an object-oriented model of the problem. You should have at least the following classes: <i>Catalog, Document</i>.
+Create a class responsible with external operations regarding a catalog. <br>
+
+</li><li> Implement the following methods representing <i>commands</i> that will manage the content of the catalog:
+  <ul>
+  <li> <i>add</i>: adds a new entry into the catalog;
+  </li><li> <i>toString</i>: a textual representation of the catalog;
+  </li><li> <i>save</i>: saves the catalog to an external file using <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a> format; 
+  you may use <a href="https://github.com/FasterXML/jackson">Jackson</a> or other library;
+  </li><li> <i>load</i>: loads the catalog from an external file.
+  </li></ul>
+</li></ul>
+
+
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+</p><ul>
+<li> Represent the commands using classes instead of methods. Use an 
+interface or an abstract class in order to desribe a generic command. <br>
+Implement the commands <i>load, list, view, report</i> (create the classes <i>AddCommand</i>, <i>ListCommand</i>, etc.).
+<ul>
+	<li> <i>list</i>: prints the list of documents on the screen;
+	</li><li> <i>view</i>: opens a document using the native operating system application (see the <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Desktop.html">Desktop</a> class);
+	</li><li> <i>report</i>: creates (and opens) an HTML report representing the content of the catalog. <br>
+Use a <a href="http://en.wikipedia.org/wiki/Template_engine_(web)">template engine</a> such as <a href="https://freemarker.apache.org/">FreeMarker</a> or <a href="http://velocity.apache.org/"> Velocity</a>,
+in order to create the HTML report.
+</li></ul>
+</li><li> The application will signal invalid data or the commands that are not valid using <i>custom exceptions</i>.
+</li><li> The final form of the application will be an executable JAR 
+archive. Identify the generated archive and launch the application from 
+the console, using the JAR.
+</li></ul>
+  
+
+<hr>
+<p><b>Bonus</b> (2p)
+<br>
+</p><ul>
+<li>Use <a href="https://tika.apache.org/">Apache Tika</a> in order to extract metadata from your catalog items and implement the command <i>info</i> in order to display them.
+
+</li><li>Each document has a set of tags (extracted metadata, or manually set by user).
+Two documents are <i>related</i> if they have a common tag. <br>
+<!-- A set of documents is independent if no pair of documents from the set are related. -->
+<!-- <li> Determine all the maximal independent set of documents. -->
+Using a minimum number of colors (labels), assign each document a color such that related documents have distinct colors. <br>
+You may want to read about <a href="https://seer.ufrgs.br/index.php/rita/article/view/RITA_Vol25_Nr4_57/pdf">exact algorithms for the graph coloring problem</a>.<br>
+Implement using Graph4J API <a href="https://github.com/jgrapht/jgrapht/blob/master/jgrapht-core/src/main/java/org/jgrapht/alg/color/BrownBacktrackColoring.java">Brown coloring algorithm</a>
+or other coloring algorithm.
+
+</li><li>Create large instances of the problem and test your algorithm (against JGraphT or other library implementations).
+</li></ul>
+
+<hr>  
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_05.pdf">Slides</a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/essential/io/">Basic I/O </a>
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/collections/index.html"> Exceptions </a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/essential/regex/">Regular Expressions</a>
+</li><li> <a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html">Setting the class path</a>
+</li><li> <a href="https://netbeans.org/kb/74/java/project-setup.html#projects-configuring"> Creating, Importing, and Configuring Java Projects in Netbeans </a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/deployment/jar/">Packaging Programs in JAR Files </a>
+
+<!-- <li> <a href="../slides/extra/pachete_slide.pdf"> Organizarea claselor in pachete (slides) </a> -->
+</li></ul>
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Use basic I/O streams.
+</li><li> Understand the difference between byte and character streams, primitive and decorator streams.
+</li><li> Use File I/O to works with files and directories.
+</li><li> Handle exceptions using <i>try-catch-finally</i> blocks.
+</li><li> Handle resources using <i>try-with-resources</i> statements.
+</li><li> Create custom exceptions and chained exceptions.
+</li><li> Use regular expressions and <a href="https://docs.oracle.com/javase/tutorial/essential/io/fileOps.html#glob">glob patterns</a>
+</li><li> Understand the notion of CLASSPATH.
+</li><li> Use external JAR libraries.
+</li><li> Package all project classes as an executable JAR file.
+</li></ul>
+
+
+
+
+
+
+</body></html>

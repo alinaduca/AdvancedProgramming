@@ -1,0 +1,124 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 4</title> 
+<style>
+table, th, td {
+  border: 0px solid black;
+}
+table {
+	border-collapse: collapse;
+	margin-left:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+</style>  
+</head>
+
+<body>
+<a name="laborator4"></a>
+
+
+<h1> Lab 4</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b><font color="red">Starting from this week...</font></b>:
+
+</p><ul>
+<li>Use appropriate collections in order to represent data (otherwise: -0.5 points)
+</li><li>Use Java Stream API in order to perform aggregate operations on data.
+</li></ul>
+
+<p>
+<b>The Student-Project Allocation Problem</b><br>
+An instance of this problem consists of students and projects. Each student has a list of projects that are admissible. <br>
+A matching is a set of pairs <i>(student, project)</i> such that each student is assigned to at most one project and each project is assigned to at most one student.
+
+We consider the problem of creating a maximum cardinality matching between students and projects.
+</p><p>
+Example: 3 students (S0,S1,S2) and 3 projects (P0,P1,P2).<br>
+Projects considered admissible by: S0={P0,P1,P2}, S1={P0,P1}, S2={P0}. <br>
+The maximum cardinality matching should be: {S0-P2, S1-P1, S2-P0}.
+
+
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+</p><ul>
+<li>Create a Maven project.
+</li><li>Create an object-oriented model of the problem. Students and 
+projects have names. Make sure the objects of these classes are 
+comparable.
+</li><li>Create the students and the projects described in the example. Use <i>streams</i> in order to easily create the objects.
+</li><li>Put all the students in a <i>LinkedList</i> and print them sorted by their names.
+</li><li>Put all the projects in a <i>TreeSet</i> and print them sorted by their names.
+</li></ul>
+
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+</p><ul>
+
+<li>Create a class that describes the problem.
+</li><li>Using Java Stream API, write a query that display all the 
+students that have a number of preferences lower than the average number
+ of preferences.
+</li><li>Use <a href="https://github.com/DiUS/java-faker">a third-party library</a> in order to generate random fake names for students and projects. 
+</li><li>Create a Greedy algorithm in order to solve the problem.
+<br>
+</li></ul>
+  
+
+<hr>
+<p><b>Bonus </b> (2p)
+<br>
+</p><ul>
+<li>Implement an algorithm that determines the maximum cardinality matching <br>
+ ... or you may use the following libraries in order to solve it:
+ <ul>
+ <li> <a href="https://jgrapht.org/">JGraphT</a> 
+ </li><li> <a href="https://profs.info.uaic.ro/~acf/graph4j/">Graph4J</a> 
+ </li></ul>
+</li><li>Create a random problem generator (with thousands of objects) 
+and test the performance of the implementation (try both libraries). <br>
+Compare the results with the ones obtained by the greedy algorithm.
+</li><li>Determine a minimum cardinality set formed of students and 
+projects with the property that each admissible pair (student-project) 
+contains at least an element of this set.
+</li><li>Determine a maximum cardinality set of of students and projects
+ such that there is no admissible pair (student-project) formed with 
+elements of this set.
+</li></ul>
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_04.pdf">Slides</a> 
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/collections/streams/">Aggregate Operations</a>
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/collections/index.html"> The Java Tutorials: Collections </a> (<a href="http://bigocheatsheet.com/"> Know Thy Complexities! </a>)
+</li><li> <a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/classpath.html">Setting the class path</a>
+</li><li> <a href="https://netbeans.org/kb/74/java/project-setup.html#projects-configuring"> Creating, Importing, and Configuring Java Projects in Netbeans </a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/deployment/jar/">Packaging Programs in JAR Files </a>
+
+<!-- <li> <a href="../slides/extra/pachete_slide.pdf"> Organizarea claselor in pachete (slides) </a> -->
+</li></ul>
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Use various collections and polymorphic algorithms.
+</li><li> Use Java Stream API.
+</li><li> Use <i>Optional</i> class and <i>var</i> keyword.
+</li><li> Understand the notion of CLASSPATH.
+</li><li> Use external JAR libraries.
+</li><li> Create a Maven Project.
+</li><li> Package all project classes as an executable JAR file.
+</li></ul>
+
+
+
+
+
+
+</body></html>

@@ -1,0 +1,90 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 11</title> </head>
+<body>
+
+<a name="lab11"></a>
+
+
+<h1> Lab 11</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b>REST Services</b> <br>
+
+Continue the application created <a href="https://profs.info.uaic.ro/~acf/java/labs/lab_10">at the previous lab</a> integrating the following functionalities:
+</p><ul>
+<li>Implement REST services needed to comunicate with the server side data (CRUD). 
+</li></ul>
+
+<p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+
+</p><ul>
+<li> Create a Spring Boot project that will contain the REST services for comunicating with the server data.
+</li><li> Create a REST controller containing a method for:
+  <ul> 
+  <li> obtaining the list of the registered players, via a HTTP GET request.
+  </li></ul>
+</li><li>Test your service using the browser and/or <a href="https://www.postman.com/">Postman</a>.
+</li></ul>
+
+
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+
+</p><ul>
+<li> Create REST services for:
+  <ul> 
+  <li> adding a new player, via a HTTP POST request.
+  </li><li> modifying the name of a player, via a HTTP PUT request.
+  </li><li> deleting a player, via a HTTP DELETE request.
+  </li></ul>
+</li><li> Create a REST service for obtaining the games that were recorded by the server.
+</li><li> Create a simple client application that invokes the services above, using the support offered by Spring Boot.
+</li><li> Document your services using <a href="https://swagger.io/">Swagger</a> or a similar tool.
+</li></ul>
+
+
+<hr>
+<p><b>Bonus</b> (2p)
+</p><ul>
+<!-- <li> Handle the exceptions using a <i>RestControllerAdvice</i>. -->
+<li> Write a service that determines a (minimal?) group of players C such that, if they were to leave the game server, 
+the remaining players would be divided into two groups A and B such that <code>max(|A|,|B|) &lt; 2n/3</code> (n is the total number of players)
+and no player in A has ever played with a player in B.
+</li><li> Secure this service using <a href="https://jwt.io/">JSON Web Tokens</a>.
+</li><li> Create a simple desktop application that sends multiple 
+concurrent invocations to the service, in order to determine how many 
+API requests per minute it can handle.<br>
+You may also monitor other <a href="https://www.moesif.com/blog/technical/api-metrics/API-Metrics-That-Every-Platform-Team-Should-be-Tracking">performance metrics</a>,
+using your own implementation or <a href="https://www.baeldung.com/spring-rest-api-metrics">Spring support</a>.
+
+</li></ul>
+
+
+<br>
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_11.pdf">Slides</a> 
+</li><li> <a href="https://restfulapi.net/"> What is REST?</a>
+</li><li> <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/">Spring Boot Reference Documentation</a>
+</li></ul>
+
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Understand the concept of application framework.
+</li><li> Get familiar with Spring Boot.
+</li><li> Understant REST software architectural style.
+</li><li> Write programs that communicate with other programs on the network, using HTTP.
+</li></ul>
+
+
+
+</body></html>

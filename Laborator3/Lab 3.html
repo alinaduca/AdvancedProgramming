@@ -1,0 +1,96 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+<title> Lab 3</title> 
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+table {
+	border-collapse: collapse;
+	margin-left:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+</style>  
+  
+</head>
+<body>
+<a name="laborator3"></a>
+
+
+<h1> Lab 3</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b>Classes and Interfaces</b><br>
+
+A social network contains <i>persons</i> and <i>companies</i>, each of them <i>identifiable</i> by unique names. <br>
+In this network there are <i>relationships</i> of the following types: person-to-person (if they know each other, how?),
+and person-to-company (if the person works for that company, on what position?).<br>
+There may be various types of "specialized" persons in the network, such as <i>programmers</i> or <i>designers</i>.
+
+  
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+</p><ul>
+<li>Create an object-oriented model of the problem. You should have at least the following classes <i>Person,  Company</i>.
+</li><li>Both classes should implement the interface <i>java.util.Comparable</i>. The natural order of the objects will be given by their names. 
+</li><li>Create the interface <i>Node</i> that defines the method used to obtain the name of a person or company.
+The classes above must implement this interface.
+</li><li>Create a <i>java.util.List</i> containing node objects and print it on the screen.
+
+</li></ul>
+
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+</p><ul>
+<li> Create the complete model: <i>Person, Programmer, Designer, Company</i>. All persons have a birth date. Each class must have at least one specific property, that others don't have (be creative).
+</li><li> Each person will contain a <i>Map</i> defining the relathionships to other persons or companies.
+</li><li> Create the <i>Network</i> class containing a <i>List</i> of identifiable nodes. 
+</li><li> Create a method that computes the importance of a node in the network, as the number of its connections to other nodes.
+</li><li> Create a network object containing persons, companies and relationships and print it on the screen.
+When printing the network, the nodes must be ordered according to their importance.
+</li></ul>
+
+<hr>
+<p><b>Bonus</b> (2p)
+<br>
+</p><ul>
+<li> Implement an <u>efficient</u> agorithm to determine if there are nodes in this networks which, if they are removed, disconnect the network.
+</li><li> Identify the <i>blocks</i> of the network, that is subgraphs that are maximally 2-connected.
+</li><li> Create JUnit tests for your algorithms.
+</li></ul>
+
+
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_03.pdf">Slides</a> 
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html"> The Java Tutorials: Interfaces </a>
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/collections/index.html"> The Java Tutorials: Collections </a> (<a href="http://bigocheatsheet.com/"> Know Thy Complexities! </a>)
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/java/generics/index.html"> The Java Tutorials: Generics </a>
+<!-- 	 -->
+</li></ul>
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Create interfaces to describe specifications.
+</li><li> Create multiple implementations of an interface.
+</li><li> Understand the differences between abstract classes and interfaces.
+</li><li> Use packages to organize the classes and intefaces of the application.
+<!-- <li> Implement the <i>Model-View-Controller</i> pattern.
+<li> Implement the <i>Factory Method</i> pattern.
+<li> Implement the <i>Observer</i> pattern. -->
+</li><li> Use collections and generics.
+</li><li> Use lambda-expressions and streams.
+</li><li> Understand the space-time tradeoff of various types of collections.
+</li></ul>
+
+
+
+</body></html>

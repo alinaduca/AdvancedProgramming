@@ -1,0 +1,99 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 1</title> </head>
+<body>
+
+
+<h1> Lab 1</h1>
+<b>[valid 2022-2023]</b>
+
+
+<p>
+
+<b>Introduction to <a href="https://docs.oracle.com/javase/tutorial/">Java Programming</a></b> <br>
+
+</p><p>
+</p><p><b>1. Compulsory</b> (1p) <br>
+Write a Java application that implements the following operations: <br>
+</p><ul>
+<li> Display on the screen the message "Hello World!". Run the application. If it works, go to step 2 :)
+</li><li> Define an array of strings <code>languages</code>, containing <code>{"C", "C++", "C#", "Python", "Go", "Rust", "JavaScript", "PHP", "Swift", "Java"}</code>
+</li><li> Generate a random integer <i>n</i>: <code>int n = (int) (Math.random() * 1_000_000);</code>
+</li><li> Compute the result obtained after performing the following calculations:
+<pre>  multiply n by 3;
+  add the binary number 10101 to the result;
+  add the hexadecimal number FF to the result;
+  multiply the result by 6;
+</pre>
+</li><li> Compute the sum of the digits in the result obtained in the previous step. This is the new result. 
+While the new result has more than one digit, continue to sum the digits of the result.
+</li><li>Display on the screen the message: <code>"Willy-nilly, this semester I will learn " + languages[result]</code>.
+</li></ul>
+  
+<hr>
+<p><b>2. Homework</b> (2p)
+</p><ul>
+<li> Let <i>n</i> be an integer given as a command line argument. Validate the argument!
+</li><li> Create a <i>n x n</i> <a href="https://en.wikipedia.org/wiki/Latin_square">Latin Square</a> as a matrix, having as symbols numbers from 1 to n.
+</li><li> For each line, and each column of the matrix, create and 
+display on the screen String objects representing the concatenation of 
+the symbols in the respective line or column.
+</li><li> For larger <i>n</i> display ONLY the running time of the application in nanoseconds or milliseconds. 
+Try <i>n &gt; 30_000</i>. You might want to adjust the JVM Heap Space using the VM options <i>-Xms4G -Xmx4G</i>.
+</li><li> Launch the application from the command line, for example: <code>java Lab1 9</code>.
+</li></ul>
+
+<hr>
+<p><b>3. Bonus</b> (2p)
+<br>
+</p><ul>
+<li> Create the <a href="https://en.wikipedia.org/wiki/Adjacency_matrix">adjacency matrix</a> A of a <a href="https://en.wikipedia.org/wiki/Cycle_graph">cycle graph</a> C<sub>n</sub>
+and compute the powers  A<sup>2</sup>, A<sup>3</sup>, .... A<sup>n</sup>.
+Give an interpretation of the result.
+</li><li> Create the adjacency matrix of a <a href="https://en.wikipedia.org/wiki/Regular_graph">regular graph</a>. The number of vertices and the vertex degree are given as arguments.
+</li></ul>
+
+
+<p>
+</p><p>
+</p><hr>
+<b>Notes</b>
+<ul>
+<li>Create a new project for each laboratory. In a project, create at 
+least one package. Create classes as necessary, do not use the same 
+class for unrelated tasks.
+Each class must contain the name(s) of the author(s) as a comment. 
+</li><li>Please consult <a href="https://docs.oracle.com/javase/8/docs/api/">the API documentation </a> to learn more information about the classes and methods used!
+</li><li>Write code faster using <a href="https://netbeans.org/project_downloads/usersguide/shortcuts-80.pdf">keyboard shortcuts</a>.
+</li></ul>
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_01.pdf">Slides</a> 
+</li><li> Download <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html"> JDK </a>
+</li><li> Download <a href="https://netbeans.org/">Netbeans</a> or other Java IDE.
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html"> Language Basics </a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/java/data/index.html"> Numbers and Strings </a>
+</li><li> <a href="https://netbeans.org/kb/docs/java/quickstart.html"> NetBeans IDE Java Quick Start Tutorial</a>
+</li></ul>
+
+<p>
+<b>Objectives</b>
+</p><ul>
+<li> Get used with an integrated development environment (IDE): <a href="https://netbeans.org/">Netbeans</a>.
+</li><li> Get used with the Java language syntax.
+</li><li> Create and run a simple application.
+</li><li> Understand the following concepts: compiler, interpreter, byte-code, Java Virtual Machine (JVM), portability.
+</li><li> Use the <a href="http://unicode.org/">Unicode</a> alphabet and Java special characters.
+</li><li> Work with primitive data types and strings (<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a>, 
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html">StringBuilder</a>).
+</li><li> Work with one- and multi-dimensional arrays.
+</li><li> Parse command line arguments. 
+</li><li> Perform conversions between strings and numbers.
+</li><li> Split a string into tokens.
+</li><li> Generate random numbers.
+</li><li> Create multiple methods in the main class of the application.
+</li></ul>
+
+
+</body></html>

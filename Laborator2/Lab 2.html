@@ -1,0 +1,128 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+<title> Lab 2</title> 
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+table {
+	border-collapse: collapse;
+	margin-left:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+</style>  
+</head>
+<body>
+
+<h1> Lab 2</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b><font color="red">Starting from this week...</font></b>:
+</p><ul>
+<li>Comment and properly format the source code of your programs (otherwise: -0.5 points)
+</li><li>Use the <a href="http://www.oracle.com/technetwork/java/codeconventions-135099.html">naming conventions</a> for writing Java code. 
+"Naming conventions make programs more understandable by making them easier to read." (otherwise: -0.5 points)
+</li><li>Use the API documentation: <a href="https://docs.oracle.com/en/java/javase/19/docs/api/index.html"> Java Platform, Standard Edition API Specification</a> (otherwise...)
+</li></ul>
+
+<br><br>
+
+
+<b>Objects and Classes </b> <br>
+<p>
+An instance of the "Best Route Problem" consists of <i>locations</i> and <i>roads</i>. Locations may be cities, airports, gas stations, etc. <br>
+Two locations may be connected by a road, or not. Roads may be highways, express, country, etc.
+</p><ul>
+  <li> Each location has a name, type and x, y coordinates (assume that the locations are placed in a cartesian coordinate system).
+  </li><li> Each road has a type, length and a speed limit. The length 
+of a road should not be less than the euclidian distance between the 
+location coordinates.
+</li></ul>
+<p>
+We consider the problem of determining the "best" route from one location to another.
+
+
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+</p><ul>
+<li>Create an object-oriented model of the problem. You should have (at least) the following classes: <i>Location, Road</i>. <br>
+The location and road types will be implemented as <i>enum</i>s.
+
+</li><li> Each class should have appropriate constructors, getters and setters. <br>Use the <a href="https://netbeans.org/features/java/editor.html"> IDE features</a> for code generation,
+such as <a href="https://blogs.oracle.com/roumen/netbeans-quick-tip-2-generating-getters-and-setters">generating getters and setters</a>.
+
+</li><li> The <i>toString</i> method form the <i>Object</i> class must be properly overridden for all the classes. <br>
+Use the <a href="https://netbeans.org/features/java/editor.html"> IDE features</a> for code generation, for example (in NetBeans)  press <i>Alt+Ins</i> or invoke the context menu, 
+select "Insert Code" and then "toString()" (or simply start typing "toString" and then press <i>Ctrl+Space</i>).
+
+</li><li>Create and print on the screen various objects of the two classes.
+</li></ul>
+
+
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+</p><ul>
+<li> Create a class that describes an instance of the <i>problem</i>. 
+</li><li> Override the <i>Object.equals</i> method for the <i>Location</i> and <i>Road</i> classes.
+The problem should not allow adding the same location or road twice.
+</li><li>Instead of using an <i>enum</i>, create dedicated classes either for locations: cities, air ports, gas stations etc. or roads: highway, express, country, etc.
+Each concrete location class may have additional specific propertes (population, number of terminals, gas price, etc.)
+</li><li> Implement a method that determines if a problem's instance is valid.
+</li><li> Implement an algorithm for determining if it is possible to go from one location to another using the given roads.
+
+</li><li>Write <a href="http://www.oracle.com/technetwork/java/javase/tech/index-137868.html">doc comments</a> in your source code 
+and generate the class documentation using <a href="https://docs.oracle.com/javase/9/javadoc/toc.htm">javadoc</a>.
+</li></ul>
+
+<hr>
+<p><b>Bonus</b> (2p)
+<br>
+</p><ul>
+<li> Create a class to describe the <i>solution</i>.
+</li><li> Implement an algorithm to find the best route from a location to another, either as the shortest route, or the fastest route.
+<!-- <li> Use the <a href="https://docs.oracle.com/javase/8/docs/api/java/time/package-summary.html">time</a> package in order to handle durations. -->
+</li><li> Generate large random instances of the problem and analyze the
+ performance of your algorithm (running times, memory consumption). 
+<!-- Identify the <i>hot-spots</i> in your code. -->
+</li></ul>
+
+(<b>Warning</b>: No points are awarded unless the implementation can be clearly explained).
+
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_02.pdf">Slides</a> 
+</li><li><a href="http://docs.oracle.com/javase/tutorial/java/concepts/index.html">Tutorial: Object-Oriented Programming Concepts </a>
+</li><li><a href="http://docs.oracle.com/javase/tutorial/java/javaOO/index.html"> Tutorial: Classes and Objects</a>
+</li><li><a href="http://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html"> Java Language Specification: Classes</a>
+</li><li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html"> Enum Types</a>
+</li><li><a href="https://docs.oracle.com/javase/tutorial/datetime/index.html"> The Date-Time package</a>
+</li></ul>
+
+
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Create a project containing multiple classes.
+</li><li> Instantiate classes and manipulate objects.
+</li><li> Understand the concepts of: object identity, object state, encapsulation, property, accessors/mutators.
+</li><li> Override methods of the <i>Object</i> class.
+</li><li> Understand uni- and bi-directional relations among objects.
+</li><li> Understand the notion of multiplicity (one-to-one, one-to-many, many-to-many).
+</li><li> Implement instance-level relationships among objects (association).
+</li><li> Implement class-level relationships (generalization)
+</li><li> Work with abstract classes.
+</li><li> Get used to the naming conventions of the Java language.
+</li><li> Generate documentation using javadoc.
+</li></ul>
+
+
+</body></html>

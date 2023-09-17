@@ -1,0 +1,76 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 12</title> </head>
+<body>
+
+<a name="lab12"></a>
+
+
+<h1> Lab 12</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b>Reflection</b> <br>
+Create an application to analyze and test java classes.<br>
+The application will receive as input java classes and it will display 
+their prototypes and perform the tests specified by the @Test 
+annotation.
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+
+</p><ul>
+<li> The input will be a .class file, located anywhere in the file system.
+</li><li> Load the specified class in memory, identifying dynamically its package.
+</li><li> Using reflection, extract as many information about the class (at least its methods).
+</li><li> Using reflection, invoke the static methods, with no arguments, annotated with @Test.
+</li></ul>
+ 
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+</p><ul>
+<li> The input may be a folder (containing .class files) or a .jar. You must explore it recursively.
+</li><li> Create the complete prototype, in the same manner as <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/">javap tool</a>.
+</li><li> Identify all public classes annotated with @Test and invoke the methods annotated with @Test, whether static or not. <br>
+If a method requires primitive (at least int) or String arguments, generate mock values for them.
+</li><li> Print a statistics regarding the tests.
+</li></ul>
+
+<hr>
+<p><b>Bonus</b> (2p)
+</p><ul>
+<li>Consider the case when the input files are .java files and compile the source code before analyzing them.
+(use <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.compiler/javax/tools/JavaCompiler.html">Java Compiler</a>, for example).
+<!-- <li>Using additional annotations, implement non-functional tests over the methods in order to test their <i>reliability</i> and <i>efficiency</i>. -->
+</li><li>Use a  bytecode manipulation and analysis framework, such as <a href="https://asm.ow2.io/">ASM</a>, <a href="https://commons.apache.org/proper/commons-bcel/">BCEL</a>
+or <a href="https://www.javassist.org/">Javassist</a> in order to extract the bytecode of the class, 
+perform bytecode instrumentation (inject code in some method) and generate dynamically a class.
+</li></ul>
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li> <a href="https://docs.oracle.com/javase/tutorial/java/package/usepkgs.html"> Packages </a>
+</li><li> <a href="http://www.developer.com/java/other/article.php/2248831/Java-Class-Loading-The-Basics.htm"> Java Class Loading: The Basics</a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/ext/basics/load.html"> Understanding Extension Class Loading </a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/reflect/">The Reflection API</a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/java/annotations/">Annotations</a>
+</li><li> <a href="https://docs.oracle.com/javase/tutorial/javabeans/">JavaBeans</a>
+</li></ul>
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Understand Java class loading mechanism.
+</li><li> Learn how to set the CLASSPATH and how to use the system class loader.
+</li><li> Load classes dynamically.
+</li><li> Instantiate objects of a class whose name is known only at runtime.
+</li><li> Use <i>Reflection API</i> to inspect or use types at runtime.
+</li><li> Understand the role of <i>annotations</i> in the context of modern programming techniques.
+</li></ul>
+
+
+
+</body></html>

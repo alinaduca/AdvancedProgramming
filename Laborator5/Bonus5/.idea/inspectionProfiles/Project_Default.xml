@@ -1,0 +1,14 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="MavenPackageUpdate" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="excludeList">
+        <list>
+          <option value="org.apache.logging.log4j:log4j-slf4j-impl" />
+          <option value="org.slf4j:slf4j-api" />
+          <option value="org.apache.tika:tika-core" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,96 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 7</title> </head>
+<body>
+
+<a name="lab7"></a>
+
+
+<h1> Lab 7</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b>Concurrency</b> <br>
+Consider a map represented as a <code>n x n</code> square matrix, each cell being an individual location of the map. <br>
+A number of robots (agents) must explore all the cells of the matrix. 
+They are initially located at random positions and are allowed to move in any direction inside the map.
+Two robots cannot be in the same cell at once. <br>
+The robots can access a shared memory containing tokens (for example, numbers from 1 to n<sup>3</sup>, shuffled). 
+Once a robot reaches an unvisited cell it must extract <code>n</code> tokens and store them in the matrix cell. <br>
+A supervisor can start/pause the robots (all of them or only a specific one).
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+
+</p><ul>
+<li> Create an object oriented model of the problem. 
+</li><li> Each robot will have a name and they must perform in a 
+concurrent manner, moving randomly around the map and extracting tokens 
+from the shared memory when reaching an unvisited cell. <br>
+A message will be displayed on the screen every time a robot visits a new cell.
+</li><li> <b>Simulate the exploration using a thread for each robot</b>. <br>
+Pay attention to the <i>synchronization</i> of the threads when extracting tokens and when visiting cells.
+</li></ul>
+
+
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+</p><ul>
+<li> Implement the commands that start/pause the robots (all of them or 
+only a specific one). A robot can be paused for a specific time or 
+indefinitely, requiring a start command. <br>
+The commands must be given using the keyboard.
+</li><li> Design an algorithm such that each robots will try to explore 
+the map in a systematic fashion, ensuring the termination of the 
+exploration process.
+</li><li> Implement a <i>timekeeper</i> thread that runs concurrently with the player threads, as a <i>daemon</i>.
+This thread will display the running time of the exploration and it will stop it exceeds a certain time limit.
+</li><li> At the end of the exploration, determine how many tokens each robot has placed in the matrix.
+</li></ul>
+
+
+<hr>
+<p><b>Bonus</b> (2p+)
+<br>
+
+</p><ul>
+<li> Consider the case in which the agents explore a graph and the goal 
+is to visit each vertex in a concurrent fashion (collaborative graph 
+exploration).
+</li><li> Using Graph4J API, implement such an algorithm.
+</li><li> You may also consider implementing a concurrent algorithm for determining a <a href="https://en.wikipedia.org/wiki/Parallel_algorithms_for_minimum_spanning_trees">minimum spanning tree</a> in a weighted graph
+or other graph algorithms that support parallelization.
+</li><li> You may also consider the case in which agents can share information when meeting at a vertex (<a href="https://www.sciencedirect.com/science/article/pii/S0890540114001576">fast collaborative graph exploration</a>),
+the goal being to explore the whole graph in a minimum number of steps.
+
+</li></ul>
+
+
+
+
+<p>
+<b>References</b>
+</p><ul>
+<li> <a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_07.pdf">Slides</a>
+</li><li> <a href="http://docs.oracle.com/javase/tutorial/essential/concurrency/"> The Java Tutorials: Concurrency</a>
+</li><li> <a href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-17.html"> Java Language Specification: Threads and Locks</a>
+</li><li> <a href="http://tutorials.jenkov.com/java-concurrency/index.html"> Java Concurrency / Multithreading Tutorial</a>
+</li></ul>
+
+
+<p> 
+<b>Objectives</b>
+</p><ul>
+<li> Understand the basic principles of <i>concurrent programming</i>.
+</li><li> Create and run threads using the <i>Thread</i> class and the <i>Runnable</i> interface.
+</li><li> Understand <i>resource contention</i> and <i>thread interference</i>.
+</li><li> Create <i>synchronized</i> methods or statements.
+</li><li> Implement the <i>wait-notify</i> mechanism.
+</li><li> Understand the <i>thread pool</i> and <i>fork/join</i> concepts.
+</li></ul>
+
+
+
+</body></html>

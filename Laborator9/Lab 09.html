@@ -1,0 +1,80 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> <title> Lab 09</title> </head>
+<body>
+
+<a name="lab09"></a>
+
+
+<h1> Lab 9</h1>
+<b>[valid 2022-2023]</b>
+
+<p>
+<b>Persistence</b> <br>
+Continue the application from <a href="https://profs.info.uaic.ro/~acf/java/labs/lab_08.html">lab 8</a>, creating an object-oriented model and using JPA (Java Persistence API) in order to communicate with the relational database.
+
+
+</p><p>
+The main specifications of the application are:
+</p><hr>
+<p><b>Compulsory</b> (1p)
+
+</p><ul>
+<li> Create a <i>persistence unit</i> (use EclipseLink or Hibernate or other JPA implementation). <br>
+Verify the presence of the <i>persistence.xml</i> file in your project.
+Make sure that the driver for EclipseLink or Hibernate was added to to your project classpath (or add it yourself).
+
+</li><li> Define the entity classes for your model (at least one) and put them in a dedicated package. 
+You may use the IDE support in order to generate entity classes from database tables. 
+<!-- Inspect these classes and modify them if necessary. -->
+
+</li><li> Create a <i>singleton</i> responsible with the management of an <i>EntityManagerFactory</i> object.
+
+</li><li> Define <i>repository</i> clases for your entities (at least one). They must contain the following methods:
+<ul>
+ <li><i>create</i> - receives an entity and saves it into the database;
+ </li><li><i>findById</i> - returns an entity based on its primary key;
+ </li><li><i>findByName</i> - returns a list of entities that match a given name pattern. Use a <i>named query</i> in order to implement this method.
+</li></ul>
+</li><li> Test your application.
+</li></ul>
+
+<hr>
+<p><b>Homework</b> (2p)
+<br>
+</p><ul>
+<li> Create all entity classes and repositories. Implement properly the <i>one-to-many</i> and <i>many-to-many</i> relationships.
+</li><li> Create a generic <i>AbstractRepository</i> using <i>generics</i> in order to simplify the creation of the <i>repository</i> classes. 
+You may take a look at the <a href="https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html">CrudRepository</a> interface from Spring Framework.
+</li><li> Insert, using JPA, a large number of fake artists and albums 
+in the database and log the execution time of your JPQL statements.
+</li></ul>
+
+<hr>
+<p><b>Bonus</b> (2p)
+</p><ul>
+<li>Implement both the JDBC and JPA implementations and use an <i>AbstractFactory</i> in order to create the DAO objects (the repositories). <br>
+The application will use JDBC or JPA depending on a specified parameter.
+<!-- You may also use an <a href="https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/beans.html">IoC container</a> in order to inject the DAO implementations. -->
+</li><li>
+Use a constraint solver, such as <a href="https://choco-solver.org/">Choco solver</a>, <a href="https://www.optaplanner.org/">OptaPlanner</a> or <a href="https://developers.google.com/optimization">ORTools</a>, 
+in order to find a set of at least <code>k</code> albums having titles that start with the same letter and they are released in the same period of time 
+(for any two albums in the result, the difference between their release years must not exceed a given value <code>p</code>).
+
+</li></ul>
+
+
+
+
+<p>
+<b>Resources</b>
+</p><ul>
+<li><a href="https://profs.info.uaic.ro/~acf/java/labs/slides/lab_09.pdf">Slides</a>
+</li><li><a href="https://www.tutorialspoint.com/jpa/">JPA Tutorial</a>
+</li><li><a href="https://docs.oracle.com/javaee/7/tutorial/partpersist.htm#BNBPY">Java EE Tutorial: Persistence</a>
+</li><li><a href="http://java-persistence-performance.blogspot.ro/2011/06/how-to-improve-jpa-performance-by-1825.html">Java Persistence Performance</a>
+</li></ul>
+
+
+
+
+</body></html>
