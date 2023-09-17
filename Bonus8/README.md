@@ -1,3 +1,0 @@
-    1.) Am creat clasele Playlist și PlaylistDAO, precum și PlaylistAlbums și PlaylistAlbumsDAO pentru a conecta playlist-uri cu albume.
-
-    2.) Am creat clasa GenerateMaxPlaylis în care generez liste cu albume care nu au nimic în comun (sunt „unrelated”). În acest sens, verific dacă două albume au lucruri în comun (fie sunt compuse de același artist, fie au fost lansate în același an, fie au măcar un gen comun), apelând funcția areRelated.

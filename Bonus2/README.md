@@ -1,8 +1,0 @@
-Am șters map-ul din Harta.java și am adăugat locationsAndRoads, care reprezintă o listă a tuturor drumurilor cu care locația curentă este incindentă.
-De asemenea, în locul metodei existsPath am implementat metoda bestRoute, care returnează drumul de la o locație de start către o destinație. În acest sens, am declarat o listă visited care va conține locațiile deja vizitate, un vector (map) before care ne va da ultima locație incidentă cu locația curentă din drumul optim, vectorul (map) speedAndLength în care voi stoca timpul necesar parcurgerii drumului (echivalent cu costul din algoritmul lui Dijkstra).
-Astfel, algoritmul ne va returna un drum optim, deoarece ia în calcul atât lungimea unui drum, cât și viteza cu care îl pot parcurge (considerând că se circulă cu viteza maximă permisă, cea stocată în speedLimit). Prin urmare, ceea ce se va lua în calcul în interiorul algoritmului va fi timpul în care pot parcurge un drum, acesta fiind dat prin road.getLength()/road.getSpeedLimit() (v=d/t, deci t=d/v).
-În continuare am aplicat algoritmul lui Dijkstra, am aflat traseul cu locațiile în ordinea de la destinație către sursă (în path), așa că am oglindit-o cu ajutorul listei path1 și am returnat-o.
-Algoritmul are o complexitate de O(n^2), deoarece alegerea minimului locAdd este făcută prin parcurgerea listei locations.
-Din punctul de vedere al memoriei utilizate, au fost folosite patru liste și două map-uri, deci visited.size()+path.size()+path1.size()+before.size()+speedAndLength.size()+roads.size() <= n + n + n + 2*n + 2*n + m <= 7*n + 7*m => O(n+m).
-
-Timpul de rulare pentru n=100 este de aproximativ 4 milisecunde, pentru n=1000, timpul a fost de 798 milisecunde, iar pentru n=10000, timpul a fost de 672291 milisecunde.

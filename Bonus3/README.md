@@ -1,7 +1,0 @@
-1.) Algoritmul pentru găsirea punctelor de articulație este eficient deoarece funcționează prin efectuarea unei parcurgeri DFS (complexitate timp O(|V|+|E|)) și menținerea mai multor structuri de date, inclusiv un map visited, o un map pentru timpul de descoperire și un map cu low value. În timpul traversării DFS, algoritmul determină dacă un vârf este un punct de articulație prin examinarea vârfurilor adiacente și a informațiilor stocate în structurile de date.
-
-Map-ul cu low values este folosit pentru a ține evidența celui mai vechi strămoș care poate fi atins de la un anumit vârf.
-
-Algoritmul folosește DFS pentru a parcurge rețeaua o singură dată, ceea ce asigură că fiecare vârf și fiecare muchie sunt vizitate o singură dată.
-
-2.) Algoritmul de determinare a blocurilor în rețea apelează la algoritmul de aflare a punctelor de articulație (implementat la punctul precedent), astfel încât, după ce rețelei i se vor afla punctele de articulație, acestea vor fi eliminate pe rând și se va verifica dacă subgraful curent este conex și nu are puncte de articulație, în caz afirmativ, acesta reprezentând un bloc în rețea (un subgraf 2-conex maximal, adică deconectarea acestuia se va realiza prin eliminarea a minim două noduri din rețea).

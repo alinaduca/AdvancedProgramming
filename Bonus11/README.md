@@ -1,7 +1,0 @@
-1.) Am implementat serviciul care determină un grup minim de jucători care pot fi eliminați, astfel încât restul jucătorilor pot fi împărțiți în două grupuri A și B astfel încât max(|A|,|B|) < 2n/3, unde n este numărul total de jucători, iar niciun jucător din A nu a jucat cu un jucător din B. Concret, în PlayerGroupService am implementat metoda buildGraph care construiește lista de adiacență conform cu graful jucătorilor (două noduri u și v sunt adiacente dacă jucătorul u a jucat cu jucătorul v), și funcția minimalGroup care determină grupul minimal de jucători C. Aici construiesc într-o buclă grupul C și verific la fiecare pas dacă grupul C are jucători și dacă este îndeplinită condiția max(|A|,|B|) < 2n/3. Dacă ultima condiție nu este îndeplinită, atunci returnez grupul C calculat la pasul precedent. Altfel, sunt în cazul în care grupul C nu are niciun jucător, deci mulțimea minimală este mulțimea vidă.
-
-2.) Am securizat aplicația cu JSON Web Tokens. Astfel, mă conectez cu username și parolă, primesc un token, iar pentru accesarea serviciului trebuie să mă conectez cu tokenul respectiv.
-
-3.) Am creat un client care trimite multiple invocări serverului, pentru a determina câte cereri API poate manevra.
-
-4.) Monitorizez și alte metrici de performanță, utilizând suportul oferit de Spring (spring actuator).
